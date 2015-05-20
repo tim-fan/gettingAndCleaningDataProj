@@ -1,10 +1,16 @@
+library(plyr)
 library(dplyr)
 
-dataUrl <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
-dataZip <- 'projData.zip'
+## GET DATA
+# note the marking rubric states - 'The code should have a file run_analysis.R in the main directory that can be run as long as the Samsung data is in your working directory'
+# So I assume this script itself is not meant to download the data.
+#The following code (commented) was used to download
 
-#download.file(url = dataUrl, destfile = dataZip) #date downloaded = "Sun May 17 18:14:38 2015"
-#unzip(zipfile = dataZip)
+#date downloaded = "Sun May 17 18:14:38 2015"
+# dataUrl <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+# dataZip <- 'projData.zip'
+# download.file(url = dataUrl, destfile = dataZip) 
+# unzip(zipfile = dataZip)
 
 
 ## READ DATA
@@ -50,3 +56,6 @@ tidyData$activity <- sapply(tidyData$activity,activityIntToString)
 #Step 5: 'From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.'
 tidyData2 <- ddply(.data = allData, .variables = .(subjectNumber, activity), .fun = colwise(mean))
 
+#Step 6: save as text file
+#This is the file that was uploaded to coursera
+# write.table(x = tidyData2, file = 'tidyData2.txt', row.names = FALSE)
