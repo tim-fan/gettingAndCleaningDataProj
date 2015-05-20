@@ -32,565 +32,70 @@ Input data was passed through script 'run_analysis.R', which performs the follow
 The following variables represent the mean values for a given subject number /activity combination as described in the above steps, with the input data being the raw data source described above.
 Apart form being a mean-value, they have the same meaning/units as they have in the original dataset. See original dataset for more details.
 Note also that most variable names have been altered/sanitised by R's make.names function, but are otherwise unchanged.
-		
+	
 	X.tBodyAcc.mean...X
 	X.tBodyAcc.mean...Y
 	X.tBodyAcc.mean...Z
 	X.tBodyAcc.std...X
 	X.tBodyAcc.std...Y
 	X.tBodyAcc.std...Z
-	X.tBodyAcc.mad...X
-	X.tBodyAcc.mad...Y
-	X.tBodyAcc.mad...Z
-	X.tBodyAcc.max...X
-	X.tBodyAcc.max...Y
-	X.tBodyAcc.max...Z
-	X.tBodyAcc.min...X
-	X.tBodyAcc.min...Y
-	X.tBodyAcc.min...Z
-	X.tBodyAcc.sma..
-	X.tBodyAcc.energy...X
-	X.tBodyAcc.energy...Y
-	X.tBodyAcc.energy...Z
-	X.tBodyAcc.iqr...X
-	X.tBodyAcc.iqr...Y
-	X.tBodyAcc.iqr...Z
-	X.tBodyAcc.entropy...X
-	X.tBodyAcc.entropy...Y
-	X.tBodyAcc.entropy...Z
-	X.tBodyAcc.arCoeff...X.1
-	X.tBodyAcc.arCoeff...X.2
-	X.tBodyAcc.arCoeff...X.3
-	X.tBodyAcc.arCoeff...X.4
-	X.tBodyAcc.arCoeff...Y.1
-	X.tBodyAcc.arCoeff...Y.2
-	X.tBodyAcc.arCoeff...Y.3
-	X.tBodyAcc.arCoeff...Y.4
-	X.tBodyAcc.arCoeff...Z.1
-	X.tBodyAcc.arCoeff...Z.2
-	X.tBodyAcc.arCoeff...Z.3
-	X.tBodyAcc.arCoeff...Z.4
-	X.tBodyAcc.correlation...X.Y
-	X.tBodyAcc.correlation...X.Z
-	X.tBodyAcc.correlation...Y.Z
 	X.tGravityAcc.mean...X
 	X.tGravityAcc.mean...Y
 	X.tGravityAcc.mean...Z
 	X.tGravityAcc.std...X
 	X.tGravityAcc.std...Y
 	X.tGravityAcc.std...Z
-	X.tGravityAcc.mad...X
-	X.tGravityAcc.mad...Y
-	X.tGravityAcc.mad...Z
-	X.tGravityAcc.max...X
-	X.tGravityAcc.max...Y
-	X.tGravityAcc.max...Z
-	X.tGravityAcc.min...X
-	X.tGravityAcc.min...Y
-	X.tGravityAcc.min...Z
-	X.tGravityAcc.sma..
-	X.tGravityAcc.energy...X
-	X.tGravityAcc.energy...Y
-	X.tGravityAcc.energy...Z
-	X.tGravityAcc.iqr...X
-	X.tGravityAcc.iqr...Y
-	X.tGravityAcc.iqr...Z
-	X.tGravityAcc.entropy...X
-	X.tGravityAcc.entropy...Y
-	X.tGravityAcc.entropy...Z
-	X.tGravityAcc.arCoeff...X.1
-	X.tGravityAcc.arCoeff...X.2
-	X.tGravityAcc.arCoeff...X.3
-	X.tGravityAcc.arCoeff...X.4
-	X.tGravityAcc.arCoeff...Y.1
-	X.tGravityAcc.arCoeff...Y.2
-	X.tGravityAcc.arCoeff...Y.3
-	X.tGravityAcc.arCoeff...Y.4
-	X.tGravityAcc.arCoeff...Z.1
-	X.tGravityAcc.arCoeff...Z.2
-	X.tGravityAcc.arCoeff...Z.3
-	X.tGravityAcc.arCoeff...Z.4
-	X.tGravityAcc.correlation...X.Y
-	X.tGravityAcc.correlation...X.Z
-	X.tGravityAcc.correlation...Y.Z
 	X.tBodyAccJerk.mean...X
 	X.tBodyAccJerk.mean...Y
 	X.tBodyAccJerk.mean...Z
 	X.tBodyAccJerk.std...X
 	X.tBodyAccJerk.std...Y
 	X.tBodyAccJerk.std...Z
-	X.tBodyAccJerk.mad...X
-	X.tBodyAccJerk.mad...Y
-	X.tBodyAccJerk.mad...Z
-	X.tBodyAccJerk.max...X
-	X.tBodyAccJerk.max...Y
-	X.tBodyAccJerk.max...Z
-	X.tBodyAccJerk.min...X
-	X.tBodyAccJerk.min...Y
-	X.tBodyAccJerk.min...Z
-	X.tBodyAccJerk.sma..
-	X.tBodyAccJerk.energy...X
-	X.tBodyAccJerk.energy...Y
-	X.tBodyAccJerk.energy...Z
-	X.tBodyAccJerk.iqr...X
-	X.tBodyAccJerk.iqr...Y
-	X.tBodyAccJerk.iqr...Z
-	X.tBodyAccJerk.entropy...X
-	X.tBodyAccJerk.entropy...Y
-	X.tBodyAccJerk.entropy...Z
-	X.tBodyAccJerk.arCoeff...X.1
-	X.tBodyAccJerk.arCoeff...X.2
-	X.tBodyAccJerk.arCoeff...X.3
-	X.tBodyAccJerk.arCoeff...X.4
-	X.tBodyAccJerk.arCoeff...Y.1
-	X.tBodyAccJerk.arCoeff...Y.2
-	X.tBodyAccJerk.arCoeff...Y.3
-	X.tBodyAccJerk.arCoeff...Y.4
-	X.tBodyAccJerk.arCoeff...Z.1
-	X.tBodyAccJerk.arCoeff...Z.2
-	X.tBodyAccJerk.arCoeff...Z.3
-	X.tBodyAccJerk.arCoeff...Z.4
-	X.tBodyAccJerk.correlation...X.Y
-	X.tBodyAccJerk.correlation...X.Z
-	X.tBodyAccJerk.correlation...Y.Z
 	X.tBodyGyro.mean...X
 	X.tBodyGyro.mean...Y
 	X.tBodyGyro.mean...Z
 	X.tBodyGyro.std...X
 	X.tBodyGyro.std...Y
 	X.tBodyGyro.std...Z
-	X.tBodyGyro.mad...X
-	X.tBodyGyro.mad...Y
-	X.tBodyGyro.mad...Z
-	X.tBodyGyro.max...X
-	X.tBodyGyro.max...Y
-	X.tBodyGyro.max...Z
-	X.tBodyGyro.min...X
-	X.tBodyGyro.min...Y
-	X.tBodyGyro.min...Z
-	X.tBodyGyro.sma..
-	X.tBodyGyro.energy...X
-	X.tBodyGyro.energy...Y
-	X.tBodyGyro.energy...Z
-	X.tBodyGyro.iqr...X
-	X.tBodyGyro.iqr...Y
-	X.tBodyGyro.iqr...Z
-	X.tBodyGyro.entropy...X
-	X.tBodyGyro.entropy...Y
-	X.tBodyGyro.entropy...Z
-	X.tBodyGyro.arCoeff...X.1
-	X.tBodyGyro.arCoeff...X.2
-	X.tBodyGyro.arCoeff...X.3
-	X.tBodyGyro.arCoeff...X.4
-	X.tBodyGyro.arCoeff...Y.1
-	X.tBodyGyro.arCoeff...Y.2
-	X.tBodyGyro.arCoeff...Y.3
-	X.tBodyGyro.arCoeff...Y.4
-	X.tBodyGyro.arCoeff...Z.1
-	X.tBodyGyro.arCoeff...Z.2
-	X.tBodyGyro.arCoeff...Z.3
-	X.tBodyGyro.arCoeff...Z.4
-	X.tBodyGyro.correlation...X.Y
-	X.tBodyGyro.correlation...X.Z
-	X.tBodyGyro.correlation...Y.Z
 	X.tBodyGyroJerk.mean...X
 	X.tBodyGyroJerk.mean...Y
 	X.tBodyGyroJerk.mean...Z
 	X.tBodyGyroJerk.std...X
 	X.tBodyGyroJerk.std...Y
 	X.tBodyGyroJerk.std...Z
-	X.tBodyGyroJerk.mad...X
-	X.tBodyGyroJerk.mad...Y
-	X.tBodyGyroJerk.mad...Z
-	X.tBodyGyroJerk.max...X
-	X.tBodyGyroJerk.max...Y
-	X.tBodyGyroJerk.max...Z
-	X.tBodyGyroJerk.min...X
-	X.tBodyGyroJerk.min...Y
-	X.tBodyGyroJerk.min...Z
-	X.tBodyGyroJerk.sma..
-	X.tBodyGyroJerk.energy...X
-	X.tBodyGyroJerk.energy...Y
-	X.tBodyGyroJerk.energy...Z
-	X.tBodyGyroJerk.iqr...X
-	X.tBodyGyroJerk.iqr...Y
-	X.tBodyGyroJerk.iqr...Z
-	X.tBodyGyroJerk.entropy...X
-	X.tBodyGyroJerk.entropy...Y
-	X.tBodyGyroJerk.entropy...Z
-	X.tBodyGyroJerk.arCoeff...X.1
-	X.tBodyGyroJerk.arCoeff...X.2
-	X.tBodyGyroJerk.arCoeff...X.3
-	X.tBodyGyroJerk.arCoeff...X.4
-	X.tBodyGyroJerk.arCoeff...Y.1
-	X.tBodyGyroJerk.arCoeff...Y.2
-	X.tBodyGyroJerk.arCoeff...Y.3
-	X.tBodyGyroJerk.arCoeff...Y.4
-	X.tBodyGyroJerk.arCoeff...Z.1
-	X.tBodyGyroJerk.arCoeff...Z.2
-	X.tBodyGyroJerk.arCoeff...Z.3
-	X.tBodyGyroJerk.arCoeff...Z.4
-	X.tBodyGyroJerk.correlation...X.Y
-	X.tBodyGyroJerk.correlation...X.Z
-	X.tBodyGyroJerk.correlation...Y.Z
 	X.tBodyAccMag.mean..
 	X.tBodyAccMag.std..
-	X.tBodyAccMag.mad..
-	X.tBodyAccMag.max..
-	X.tBodyAccMag.min..
-	X.tBodyAccMag.sma..
-	X.tBodyAccMag.energy..
-	X.tBodyAccMag.iqr..
-	X.tBodyAccMag.entropy..
-	X.tBodyAccMag.arCoeff..1
-	X.tBodyAccMag.arCoeff..2
-	X.tBodyAccMag.arCoeff..3
-	X.tBodyAccMag.arCoeff..4
 	X.tGravityAccMag.mean..
 	X.tGravityAccMag.std..
-	X.tGravityAccMag.mad..
-	X.tGravityAccMag.max..
-	X.tGravityAccMag.min..
-	X.tGravityAccMag.sma..
-	X.tGravityAccMag.energy..
-	X.tGravityAccMag.iqr..
-	X.tGravityAccMag.entropy..
-	X.tGravityAccMag.arCoeff..1
-	X.tGravityAccMag.arCoeff..2
-	X.tGravityAccMag.arCoeff..3
-	X.tGravityAccMag.arCoeff..4
 	X.tBodyAccJerkMag.mean..
 	X.tBodyAccJerkMag.std..
-	X.tBodyAccJerkMag.mad..
-	X.tBodyAccJerkMag.max..
-	X.tBodyAccJerkMag.min..
-	X.tBodyAccJerkMag.sma..
-	X.tBodyAccJerkMag.energy..
-	X.tBodyAccJerkMag.iqr..
-	X.tBodyAccJerkMag.entropy..
-	X.tBodyAccJerkMag.arCoeff..1
-	X.tBodyAccJerkMag.arCoeff..2
-	X.tBodyAccJerkMag.arCoeff..3
-	X.tBodyAccJerkMag.arCoeff..4
 	X.tBodyGyroMag.mean..
 	X.tBodyGyroMag.std..
-	X.tBodyGyroMag.mad..
-	X.tBodyGyroMag.max..
-	X.tBodyGyroMag.min..
-	X.tBodyGyroMag.sma..
-	X.tBodyGyroMag.energy..
-	X.tBodyGyroMag.iqr..
-	X.tBodyGyroMag.entropy..
-	X.tBodyGyroMag.arCoeff..1
-	X.tBodyGyroMag.arCoeff..2
-	X.tBodyGyroMag.arCoeff..3
-	X.tBodyGyroMag.arCoeff..4
 	X.tBodyGyroJerkMag.mean..
 	X.tBodyGyroJerkMag.std..
-	X.tBodyGyroJerkMag.mad..
-	X.tBodyGyroJerkMag.max..
-	X.tBodyGyroJerkMag.min..
-	X.tBodyGyroJerkMag.sma..
-	X.tBodyGyroJerkMag.energy..
-	X.tBodyGyroJerkMag.iqr..
-	X.tBodyGyroJerkMag.entropy..
-	X.tBodyGyroJerkMag.arCoeff..1
-	X.tBodyGyroJerkMag.arCoeff..2
-	X.tBodyGyroJerkMag.arCoeff..3
-	X.tBodyGyroJerkMag.arCoeff..4
 	X.fBodyAcc.mean...X
 	X.fBodyAcc.mean...Y
 	X.fBodyAcc.mean...Z
 	X.fBodyAcc.std...X
 	X.fBodyAcc.std...Y
 	X.fBodyAcc.std...Z
-	X.fBodyAcc.mad...X
-	X.fBodyAcc.mad...Y
-	X.fBodyAcc.mad...Z
-	X.fBodyAcc.max...X
-	X.fBodyAcc.max...Y
-	X.fBodyAcc.max...Z
-	X.fBodyAcc.min...X
-	X.fBodyAcc.min...Y
-	X.fBodyAcc.min...Z
-	X.fBodyAcc.sma..
-	X.fBodyAcc.energy...X
-	X.fBodyAcc.energy...Y
-	X.fBodyAcc.energy...Z
-	X.fBodyAcc.iqr...X
-	X.fBodyAcc.iqr...Y
-	X.fBodyAcc.iqr...Z
-	X.fBodyAcc.entropy...X
-	X.fBodyAcc.entropy...Y
-	X.fBodyAcc.entropy...Z
-	X.fBodyAcc.maxInds.X
-	X.fBodyAcc.maxInds.Y
-	X.fBodyAcc.maxInds.Z
-	X.fBodyAcc.meanFreq...X
-	X.fBodyAcc.meanFreq...Y
-	X.fBodyAcc.meanFreq...Z
-	X.fBodyAcc.skewness...X
-	X.fBodyAcc.kurtosis...X
-	X.fBodyAcc.skewness...Y
-	X.fBodyAcc.kurtosis...Y
-	X.fBodyAcc.skewness...Z
-	X.fBodyAcc.kurtosis...Z
-	X.fBodyAcc.bandsEnergy...1.8
-	X.fBodyAcc.bandsEnergy...9.16
-	X.fBodyAcc.bandsEnergy...17.24
-	X.fBodyAcc.bandsEnergy...25.32
-	X.fBodyAcc.bandsEnergy...33.40
-	X.fBodyAcc.bandsEnergy...41.48
-	X.fBodyAcc.bandsEnergy...49.56
-	X.fBodyAcc.bandsEnergy...57.64
-	X.fBodyAcc.bandsEnergy...1.16
-	X.fBodyAcc.bandsEnergy...17.32
-	X.fBodyAcc.bandsEnergy...33.48
-	X.fBodyAcc.bandsEnergy...49.64
-	X.fBodyAcc.bandsEnergy...1.24
-	X.fBodyAcc.bandsEnergy...25.48
-	X.fBodyAcc.bandsEnergy...1.8.1
-	X.fBodyAcc.bandsEnergy...9.16.1
-	X.fBodyAcc.bandsEnergy...17.24.1
-	X.fBodyAcc.bandsEnergy...25.32.1
-	X.fBodyAcc.bandsEnergy...33.40.1
-	X.fBodyAcc.bandsEnergy...41.48.1
-	X.fBodyAcc.bandsEnergy...49.56.1
-	X.fBodyAcc.bandsEnergy...57.64.1
-	X.fBodyAcc.bandsEnergy...1.16.1
-	X.fBodyAcc.bandsEnergy...17.32.1
-	X.fBodyAcc.bandsEnergy...33.48.1
-	X.fBodyAcc.bandsEnergy...49.64.1
-	X.fBodyAcc.bandsEnergy...1.24.1
-	X.fBodyAcc.bandsEnergy...25.48.1
-	X.fBodyAcc.bandsEnergy...1.8.2
-	X.fBodyAcc.bandsEnergy...9.16.2
-	X.fBodyAcc.bandsEnergy...17.24.2
-	X.fBodyAcc.bandsEnergy...25.32.2
-	X.fBodyAcc.bandsEnergy...33.40.2
-	X.fBodyAcc.bandsEnergy...41.48.2
-	X.fBodyAcc.bandsEnergy...49.56.2
-	X.fBodyAcc.bandsEnergy...57.64.2
-	X.fBodyAcc.bandsEnergy...1.16.2
-	X.fBodyAcc.bandsEnergy...17.32.2
-	X.fBodyAcc.bandsEnergy...33.48.2
-	X.fBodyAcc.bandsEnergy...49.64.2
-	X.fBodyAcc.bandsEnergy...1.24.2
-	X.fBodyAcc.bandsEnergy...25.48.2
 	X.fBodyAccJerk.mean...X
 	X.fBodyAccJerk.mean...Y
 	X.fBodyAccJerk.mean...Z
 	X.fBodyAccJerk.std...X
 	X.fBodyAccJerk.std...Y
 	X.fBodyAccJerk.std...Z
-	X.fBodyAccJerk.mad...X
-	X.fBodyAccJerk.mad...Y
-	X.fBodyAccJerk.mad...Z
-	X.fBodyAccJerk.max...X
-	X.fBodyAccJerk.max...Y
-	X.fBodyAccJerk.max...Z
-	X.fBodyAccJerk.min...X
-	X.fBodyAccJerk.min...Y
-	X.fBodyAccJerk.min...Z
-	X.fBodyAccJerk.sma..
-	X.fBodyAccJerk.energy...X
-	X.fBodyAccJerk.energy...Y
-	X.fBodyAccJerk.energy...Z
-	X.fBodyAccJerk.iqr...X
-	X.fBodyAccJerk.iqr...Y
-	X.fBodyAccJerk.iqr...Z
-	X.fBodyAccJerk.entropy...X
-	X.fBodyAccJerk.entropy...Y
-	X.fBodyAccJerk.entropy...Z
-	X.fBodyAccJerk.maxInds.X
-	X.fBodyAccJerk.maxInds.Y
-	X.fBodyAccJerk.maxInds.Z
-	X.fBodyAccJerk.meanFreq...X
-	X.fBodyAccJerk.meanFreq...Y
-	X.fBodyAccJerk.meanFreq...Z
-	X.fBodyAccJerk.skewness...X
-	X.fBodyAccJerk.kurtosis...X
-	X.fBodyAccJerk.skewness...Y
-	X.fBodyAccJerk.kurtosis...Y
-	X.fBodyAccJerk.skewness...Z
-	X.fBodyAccJerk.kurtosis...Z
-	X.fBodyAccJerk.bandsEnergy...1.8
-	X.fBodyAccJerk.bandsEnergy...9.16
-	X.fBodyAccJerk.bandsEnergy...17.24
-	X.fBodyAccJerk.bandsEnergy...25.32
-	X.fBodyAccJerk.bandsEnergy...33.40
-	X.fBodyAccJerk.bandsEnergy...41.48
-	X.fBodyAccJerk.bandsEnergy...49.56
-	X.fBodyAccJerk.bandsEnergy...57.64
-	X.fBodyAccJerk.bandsEnergy...1.16
-	X.fBodyAccJerk.bandsEnergy...17.32
-	X.fBodyAccJerk.bandsEnergy...33.48
-	X.fBodyAccJerk.bandsEnergy...49.64
-	X.fBodyAccJerk.bandsEnergy...1.24
-	X.fBodyAccJerk.bandsEnergy...25.48
-	X.fBodyAccJerk.bandsEnergy...1.8.1
-	X.fBodyAccJerk.bandsEnergy...9.16.1
-	X.fBodyAccJerk.bandsEnergy...17.24.1
-	X.fBodyAccJerk.bandsEnergy...25.32.1
-	X.fBodyAccJerk.bandsEnergy...33.40.1
-	X.fBodyAccJerk.bandsEnergy...41.48.1
-	X.fBodyAccJerk.bandsEnergy...49.56.1
-	X.fBodyAccJerk.bandsEnergy...57.64.1
-	X.fBodyAccJerk.bandsEnergy...1.16.1
-	X.fBodyAccJerk.bandsEnergy...17.32.1
-	X.fBodyAccJerk.bandsEnergy...33.48.1
-	X.fBodyAccJerk.bandsEnergy...49.64.1
-	X.fBodyAccJerk.bandsEnergy...1.24.1
-	X.fBodyAccJerk.bandsEnergy...25.48.1
-	X.fBodyAccJerk.bandsEnergy...1.8.2
-	X.fBodyAccJerk.bandsEnergy...9.16.2
-	X.fBodyAccJerk.bandsEnergy...17.24.2
-	X.fBodyAccJerk.bandsEnergy...25.32.2
-	X.fBodyAccJerk.bandsEnergy...33.40.2
-	X.fBodyAccJerk.bandsEnergy...41.48.2
-	X.fBodyAccJerk.bandsEnergy...49.56.2
-	X.fBodyAccJerk.bandsEnergy...57.64.2
-	X.fBodyAccJerk.bandsEnergy...1.16.2
-	X.fBodyAccJerk.bandsEnergy...17.32.2
-	X.fBodyAccJerk.bandsEnergy...33.48.2
-	X.fBodyAccJerk.bandsEnergy...49.64.2
-	X.fBodyAccJerk.bandsEnergy...1.24.2
-	X.fBodyAccJerk.bandsEnergy...25.48.2
 	X.fBodyGyro.mean...X
 	X.fBodyGyro.mean...Y
 	X.fBodyGyro.mean...Z
 	X.fBodyGyro.std...X
 	X.fBodyGyro.std...Y
 	X.fBodyGyro.std...Z
-	X.fBodyGyro.mad...X
-	X.fBodyGyro.mad...Y
-	X.fBodyGyro.mad...Z
-	X.fBodyGyro.max...X
-	X.fBodyGyro.max...Y
-	X.fBodyGyro.max...Z
-	X.fBodyGyro.min...X
-	X.fBodyGyro.min...Y
-	X.fBodyGyro.min...Z
-	X.fBodyGyro.sma..
-	X.fBodyGyro.energy...X
-	X.fBodyGyro.energy...Y
-	X.fBodyGyro.energy...Z
-	X.fBodyGyro.iqr...X
-	X.fBodyGyro.iqr...Y
-	X.fBodyGyro.iqr...Z
-	X.fBodyGyro.entropy...X
-	X.fBodyGyro.entropy...Y
-	X.fBodyGyro.entropy...Z
-	X.fBodyGyro.maxInds.X
-	X.fBodyGyro.maxInds.Y
-	X.fBodyGyro.maxInds.Z
-	X.fBodyGyro.meanFreq...X
-	X.fBodyGyro.meanFreq...Y
-	X.fBodyGyro.meanFreq...Z
-	X.fBodyGyro.skewness...X
-	X.fBodyGyro.kurtosis...X
-	X.fBodyGyro.skewness...Y
-	X.fBodyGyro.kurtosis...Y
-	X.fBodyGyro.skewness...Z
-	X.fBodyGyro.kurtosis...Z
-	X.fBodyGyro.bandsEnergy...1.8
-	X.fBodyGyro.bandsEnergy...9.16
-	X.fBodyGyro.bandsEnergy...17.24
-	X.fBodyGyro.bandsEnergy...25.32
-	X.fBodyGyro.bandsEnergy...33.40
-	X.fBodyGyro.bandsEnergy...41.48
-	X.fBodyGyro.bandsEnergy...49.56
-	X.fBodyGyro.bandsEnergy...57.64
-	X.fBodyGyro.bandsEnergy...1.16
-	X.fBodyGyro.bandsEnergy...17.32
-	X.fBodyGyro.bandsEnergy...33.48
-	X.fBodyGyro.bandsEnergy...49.64
-	X.fBodyGyro.bandsEnergy...1.24
-	X.fBodyGyro.bandsEnergy...25.48
-	X.fBodyGyro.bandsEnergy...1.8.1
-	X.fBodyGyro.bandsEnergy...9.16.1
-	X.fBodyGyro.bandsEnergy...17.24.1
-	X.fBodyGyro.bandsEnergy...25.32.1
-	X.fBodyGyro.bandsEnergy...33.40.1
-	X.fBodyGyro.bandsEnergy...41.48.1
-	X.fBodyGyro.bandsEnergy...49.56.1
-	X.fBodyGyro.bandsEnergy...57.64.1
-	X.fBodyGyro.bandsEnergy...1.16.1
-	X.fBodyGyro.bandsEnergy...17.32.1
-	X.fBodyGyro.bandsEnergy...33.48.1
-	X.fBodyGyro.bandsEnergy...49.64.1
-	X.fBodyGyro.bandsEnergy...1.24.1
-	X.fBodyGyro.bandsEnergy...25.48.1
-	X.fBodyGyro.bandsEnergy...1.8.2
-	X.fBodyGyro.bandsEnergy...9.16.2
-	X.fBodyGyro.bandsEnergy...17.24.2
-	X.fBodyGyro.bandsEnergy...25.32.2
-	X.fBodyGyro.bandsEnergy...33.40.2
-	X.fBodyGyro.bandsEnergy...41.48.2
-	X.fBodyGyro.bandsEnergy...49.56.2
-	X.fBodyGyro.bandsEnergy...57.64.2
-	X.fBodyGyro.bandsEnergy...1.16.2
-	X.fBodyGyro.bandsEnergy...17.32.2
-	X.fBodyGyro.bandsEnergy...33.48.2
-	X.fBodyGyro.bandsEnergy...49.64.2
-	X.fBodyGyro.bandsEnergy...1.24.2
-	X.fBodyGyro.bandsEnergy...25.48.2
 	X.fBodyAccMag.mean..
 	X.fBodyAccMag.std..
-	X.fBodyAccMag.mad..
-	X.fBodyAccMag.max..
-	X.fBodyAccMag.min..
-	X.fBodyAccMag.sma..
-	X.fBodyAccMag.energy..
-	X.fBodyAccMag.iqr..
-	X.fBodyAccMag.entropy..
-	X.fBodyAccMag.maxInds
-	X.fBodyAccMag.meanFreq..
-	X.fBodyAccMag.skewness..
-	X.fBodyAccMag.kurtosis..
 	X.fBodyBodyAccJerkMag.mean..
 	X.fBodyBodyAccJerkMag.std..
-	X.fBodyBodyAccJerkMag.mad..
-	X.fBodyBodyAccJerkMag.max..
-	X.fBodyBodyAccJerkMag.min..
-	X.fBodyBodyAccJerkMag.sma..
-	X.fBodyBodyAccJerkMag.energy..
-	X.fBodyBodyAccJerkMag.iqr..
-	X.fBodyBodyAccJerkMag.entropy..
-	X.fBodyBodyAccJerkMag.maxInds
-	X.fBodyBodyAccJerkMag.meanFreq..
-	X.fBodyBodyAccJerkMag.skewness..
-	X.fBodyBodyAccJerkMag.kurtosis..
 	X.fBodyBodyGyroMag.mean..
 	X.fBodyBodyGyroMag.std..
-	X.fBodyBodyGyroMag.mad..
-	X.fBodyBodyGyroMag.max..
-	X.fBodyBodyGyroMag.min..
-	X.fBodyBodyGyroMag.sma..
-	X.fBodyBodyGyroMag.energy..
-	X.fBodyBodyGyroMag.iqr..
-	X.fBodyBodyGyroMag.entropy..
-	X.fBodyBodyGyroMag.maxInds
-	X.fBodyBodyGyroMag.meanFreq..
-	X.fBodyBodyGyroMag.skewness..
-	X.fBodyBodyGyroMag.kurtosis..
 	X.fBodyBodyGyroJerkMag.mean..
 	X.fBodyBodyGyroJerkMag.std..
-	X.fBodyBodyGyroJerkMag.mad..
-	X.fBodyBodyGyroJerkMag.max..
-	X.fBodyBodyGyroJerkMag.min..
-	X.fBodyBodyGyroJerkMag.sma..
-	X.fBodyBodyGyroJerkMag.energy..
-	X.fBodyBodyGyroJerkMag.iqr..
-	X.fBodyBodyGyroJerkMag.entropy..
-	X.fBodyBodyGyroJerkMag.maxInds
-	X.fBodyBodyGyroJerkMag.meanFreq..
-	X.fBodyBodyGyroJerkMag.skewness..
-	X.fBodyBodyGyroJerkMag.kurtosis..
-	X.angle.tBodyAccMean.gravity.
-	X.angle.tBodyAccJerkMean..gravityMean.
-	X.angle.tBodyGyroMean.gravityMean.
-	X.angle.tBodyGyroJerkMean.gravityMean.
-	X.angle.X.gravityMean.
-	X.angle.Y.gravityMean.
-	X.angle.Z.gravityMean.

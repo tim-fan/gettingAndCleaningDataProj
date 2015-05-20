@@ -54,7 +54,7 @@ tidyData$activity <- sapply(tidyData$activity,activityIntToString)
 # -> already done - variable names were applied when datasets were loaded (above).
 
 #Step 5: 'From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.'
-tidyData2 <- ddply(.data = allData, .variables = .(subjectNumber, activity), .fun = colwise(mean))
+tidyData2 <- ddply(.data = tidyData, .variables = .(subjectNumber, activity), .fun = colwise(mean))
 
 #Step 6: save as text file
 #This is the file that was uploaded to coursera
